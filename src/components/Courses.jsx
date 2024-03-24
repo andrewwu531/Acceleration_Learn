@@ -18,7 +18,7 @@ function Courses() {
   return (
     <div className="bg-gray-150">
 
-      <div className="flex items-center pt-10 pb-10 mx-auto xl:p-10 xl:max-w-screen-xl lg:max-w-screen-lg">
+      <div className="flex items-center justify-center pt-10 pb-10 mx-auto xl:max-w-6xl lg:max-w-5xl">
 
         <div className="grid grid-flow-col xl:gap-2 gap-1.5">
             {data.map(card => (
