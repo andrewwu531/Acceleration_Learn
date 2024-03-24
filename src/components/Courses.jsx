@@ -16,7 +16,7 @@ const data = [
 
 function Courses() {
   return (
-    <div className="bg-gray-150">
+    <div className="bg-gray-150" style={{ marginTop: "6vh", marginBottom: "12vh" }}>
 
       <div className="flex items-center justify-center pt-10 pb-10 mx-auto xl:max-w-5xl lg:max-w-4xl">
 

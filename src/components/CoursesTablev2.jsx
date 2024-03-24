@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 
 export default function UnderlineTabs() {
-  const [activeTab, setActiveTab] = React.useState("html");
+  const [activeTab, setActiveTab] = React.useState("programme 1: Nutrition & Weightlifting");
   const data = [
     {
       label: "Programme 1: Nutrition & Weightlifting",
@@ -41,7 +41,7 @@ export default function UnderlineTabs() {
       value: "programme 2: 100+ Topic-Based Journals with Videos",
       desc: [
         {
-          header: "",
+          header: "Social Knowledge Accelerator",
           points: [
             "1.1. Why writing life journals & summaries are important to improve your social English",
             "1.2. The 100+ journals & summaries with analysis",
@@ -57,7 +57,7 @@ export default function UnderlineTabs() {
       value: "programme 3: The English Pronunciation & Speaking Course",
       desc: [
         {
-          header: "",
+          header: "The English Speaking Course",
           points: [
             "1.1. The standard English pronunciation course",
             "1.2. Speaking style and patterns",
@@ -72,7 +72,7 @@ export default function UnderlineTabs() {
       value: "programme 4: The English Writing Course",
       desc: [
         {
-          header: "",
+          header: "The English Writing Course",
           points: [
             "1.1. Why emotional tapping & sense of humour important",
             "1.2. Comedy Writing Principles",
@@ -87,7 +87,7 @@ export default function UnderlineTabs() {
       value: "programme 5: The Mastermind Psychology Course",
       desc: [
         {
-          header: "",
+          header: "Nurture Your Mind",
           points: [
             "1.1. Positive mind",
             "1.2. Positive habits",
@@ -101,40 +101,43 @@ export default function UnderlineTabs() {
   ];
 
    return (
-    <div className="flex justify-center h-screen mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "20vh" }}>
-      <Tabs value={activeTab}>
-        <TabsHeader
-          className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
-          indicatorProps={{
-            className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
-          }}
-        >
-          {data.map(({ label, value }) => (
-            <Tab
-              key={value}
-              value={value}
-              onClick={() => setActiveTab(value)}
-              className={activeTab === value ? "text-gray-900" : ""}
-            >
-              {label}
-            </Tab>
-          ))}
-        </TabsHeader>
-        <TabsBody>
-          {data.map(({ value, desc }) => (
-            <TabPanel key={value} value={value}>
-              {desc.map((description, index) => (
-                <div key={index}>
-                  <h3>{description.header}</h3>
-                  {description.points.map((point, pointIndex) => (
-                    <div key={pointIndex}>{point}</div>
-                  ))}
-                </div>
-              ))}
-            </TabPanel>
-          ))}
-        </TabsBody>
-      </Tabs>
+    <div className="bg-gray-150">
+      <div className="flex justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
+        <Tabs value={activeTab}>
+          <TabsHeader
+            className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
+            indicatorProps={{
+              className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+            }}
+          >
+            {data.map(({ label, value }) => (
+              <Tab
+                key={value}
+                value={value}
+                onClick={() => setActiveTab(value)}
+                className={activeTab === value ? "text-gray-900" : ""}
+                
+              >
+                <div className="font-medium">{label}</div>
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody className="m-5 ml-10">
+            {data.map(({ value, desc }) => (
+              <TabPanel key={value} value={value}>
+                {desc.map((description, index) => (
+                  <div key={index}>
+                    <h3 className="pt-10 pb-5 font-semibold text-black">{description.header}</h3>
+                    {description.points.map((point, pointIndex) => (
+                      <li className="mb-3 ml-8 font-normal" key={pointIndex}>{point}</li>
+                    ))}
+                  </div>
+                ))}
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      </div>
     </div>
   );
 }
