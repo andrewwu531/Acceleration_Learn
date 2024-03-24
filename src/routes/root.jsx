@@ -1,6 +1,6 @@
 import Courses from '../components/Courses';
 import NavBar from '../components/NavBar';
-import CoursesTableOfContents from '../components/CoursesTableOfContents';
+import CoursesTablev2 from '../components/CoursesTablev2';
 import CoachPic1 from '../components/CoachPic1';
 
 function Root() {
@@ -14,7 +14,7 @@ function Root() {
 
         <CoachPic1 />
 
-        <CoursesTableOfContents />      
+        <CoursesTablev2 />      
 
 
 
