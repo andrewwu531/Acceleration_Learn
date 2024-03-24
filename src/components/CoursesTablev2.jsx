@@ -6,79 +6,135 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
- 
+
 export default function UnderlineTabs() {
   const [activeTab, setActiveTab] = React.useState("html");
-   const data = [
+  const data = [
     {
       label: "Programme 1: Nutrition & Weightlifting",
       value: "programme 1: Nutrition & Weightlifting",
-      desc: ["Nutrition\n",
-             "1.1. Bodybuilding is 80% dieting & 20% workout",
-             "1.2. Why the medium calories, high protein, medium carbohydrate & low fat diet",
-             "1.3. Calculating your personalised recommended calories, protein, carbohydrate & fat intake",
-             "1.4. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
-             "1.5. Carb cycling & the front heavy approach dieting",
-             "1.6. Practical recipes & cooking appliances",
-             "Weightlifting",
-             "2.1. "
-             ],
+      desc: [
+        {
+          header: "Nutrition",
+          points: [
+            "1.1. Bodybuilding is 80% dieting & 20% workout",
+            "1.2. Why the medium calories, high protein, medium carbohydrate & low fat diet",
+            "1.3. Calculating your personalised recommended calories, protein, carbohydrate & fat intake",
+            "1.4. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
+            "1.5. Carb cycling & the front heavy approach dieting",
+            "1.6. Practical recipes & cooking appliances",
+          ],
+        },
+        {
+          header: "Weightlifting",
+          points: [
+            "2.1. Muscle Types & Training Methods",
+            "2.2. Weightlifting Techniques",
+            "2.3. A Practical Gym Session",
+            "2.4. HIIT & Calisthenics & Plyometric",
+          ],
+        },
+      ],
     },
     {
-      label: "Programme 2: Topic-Based Journals with Videos",
-      value: "sample Article 1",
-      desc: ["Because it's about motivating the doers. Because I'm here",
-              "to follow my dreams and inspire other people to follow their dreams, too."],
+      label: "Programme 2: 100+ Topic-Based Journals with Videos",
+      value: "programme 2: 100+ Topic-Based Journals with Videos",
+      desc: [
+        {
+          header: "",
+          points: [
+            "1.1. Why writing life journals & summaries are important to improve your social English",
+            "1.2. The 100+ journals & summaries with analysis",
+            "1.3. Topics that we cover (life experience, travel, comedy, TV & films, facts...)",
+            "1.4. Speak confidently and natively with momentum through our expert articles and speaking programme",
+            "1.5. Introducing our proofreading service",
+          ],
+        },
+      ],
     },
     {
       label: "Programme 3: The English Pronunciation & Speaking Course",
-      value: "sample Video 1",
-      desc: ["Because it's about motivating the doers. Because I'm here",
-              "to follow my dreams and inspire other people to follow their dreams, too."],
+      value: "programme 3: The English Pronunciation & Speaking Course",
+      desc: [
+        {
+          header: "",
+          points: [
+            "1.1. The standard English pronunciation course",
+            "1.2. Speaking style and patterns",
+            "1.3. Acquiring the confident voice through positive psychology",
+            "1.4. Positive body language & expressions",
+          ],
+        },
+      ],
     },
     {
       label: "Programme 4: The English Writing Course",
-      value: "sample Article 2",
-      desc: ["Because it's about motivating the doers. Because I'm here",
-              "to follow my dreams and inspire other people to follow their dreams, too."],
+      value: "programme 4: The English Writing Course",
+      desc: [
+        {
+          header: "",
+          points: [
+            "1.1. Why emotional tapping & sense of humour important",
+            "1.2. Comedy Writing Principles",
+            "1.3. Storytelling Principles",
+            "1.4. 40+ Comedy shows word-by-word scripts with analysis",
+          ],
+        },
+      ],
     },
     {
-      label: "Programme 5: The Business English Course",
-      value: "sample Video 2",
-      desc: ["Because it's about motivating the doers. Because I'm here",
-             "to follow my dreams and inspire other people to follow their dreams, too."],
+      label: "Programme 5: The Mastermind Psychology Course",
+      value: "programme 5: The Mastermind Psychology Course",
+      desc: [
+        {
+          header: "",
+          points: [
+            "1.1. Positive mind",
+            "1.2. Positive habits",
+            "1.3. Positive personality & traits",
+            "1.4. Self-awareness",
+            "1.5. Positive way of thinking",
+          ],
+        },
+      ],
     },
   ];
 
-  return (
-    <div className="flex justify-center h-screen mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: '20vh' }}> 
-        <Tabs value={activeTab}>
+   return (
+    <div className="flex justify-center h-screen mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "20vh" }}>
+      <Tabs value={activeTab}>
         <TabsHeader
-            className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
-            indicatorProps={{
-            className:
-                "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
-            }}
+          className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
+          indicatorProps={{
+            className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+          }}
         >
-            {data.map(({ label, value }) => (
+          {data.map(({ label, value }) => (
             <Tab
-                key={value}
-                value={value}
-                onClick={() => setActiveTab(value)}
-                className={activeTab === value ? "text-gray-900" : ""}
+              key={value}
+              value={value}
+              onClick={() => setActiveTab(value)}
+              className={activeTab === value ? "text-gray-900" : ""}
             >
-                {label}
+              {label}
             </Tab>
-            ))}
+          ))}
         </TabsHeader>
         <TabsBody>
-            {data.map(({ value, desc }) => (
+          {data.map(({ value, desc }) => (
             <TabPanel key={value} value={value}>
-                {desc}
+              {desc.map((description, index) => (
+                <div key={index}>
+                  <h3>{description.header}</h3>
+                  {description.points.map((point, pointIndex) => (
+                    <div key={pointIndex}>{point}</div>
+                  ))}
+                </div>
+              ))}
             </TabPanel>
-            ))}
+          ))}
         </TabsBody>
-        </Tabs>
+      </Tabs>
     </div>
   );
 }
