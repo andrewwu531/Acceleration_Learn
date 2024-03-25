@@ -8,6 +8,7 @@ function Root() {
 
   return ( 
     <div>
+
      
         <NavBar />
     
