@@ -30,5 +30,12 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
     "vite": "^5.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ]
   }
 }

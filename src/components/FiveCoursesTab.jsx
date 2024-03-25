@@ -7,6 +7,7 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 
+
 export default function UnderlineTabs() {
   const [activeTab, setActiveTab] = React.useState("programme 1: Nutrition & Weightlifting");
   const data = [
@@ -101,43 +102,45 @@ export default function UnderlineTabs() {
   ];
 
    return (
-    <div className="bg-gray-150">
-      <div className="flex justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
-        <Tabs value={activeTab}>
-          <TabsHeader
-            className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
-            indicatorProps={{
-              className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
-            }}
-          >
-            {data.map(({ label, value }) => (
-              <Tab
-                key={value}
-                value={value}
-                onClick={() => setActiveTab(value)}
-                className={activeTab === value ? "text-gray-900" : ""}
-                
-              >
-                <div className="font-medium">{label}</div>
-              </Tab>
-            ))}
-          </TabsHeader>
-          <TabsBody className="m-5 ml-10">
-            {data.map(({ value, desc }) => (
-              <TabPanel key={value} value={value}>
-                {desc.map((description, index) => (
-                  <div key={index}>
-                    <h3 className="pt-10 pb-5 font-semibold text-black">{description.header}</h3>
-                    {description.points.map((point, pointIndex) => (
-                      <li className="mb-3 ml-8 font-normal" key={pointIndex}>{point}</li>
-                    ))}
-                  </div>
-                ))}
-              </TabPanel>
-            ))}
-          </TabsBody>
-        </Tabs>
+    
+      <div className="bg-gray-150">
+        <div className="flex justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
+          <Tabs value={activeTab}>
+            <TabsHeader
+              className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
+              indicatorProps={{
+                className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+              }}
+            >
+              {data.map(({ label, value }) => (
+                <Tab
+                  key={value}
+                  value={value}
+                  onClick={() => setActiveTab(value)}
+                  className={activeTab === value ? "text-gray-900" : ""}
+                  
+                >
+                  <div className="font-medium">{label}</div>
+                </Tab>
+              ))}
+            </TabsHeader>
+            <TabsBody className="ml-10 ">
+              {data.map(({ value, desc }) => (
+                <TabPanel key={value} value={value}>
+                  {desc.map((description, index) => (
+                    <div key={index}>
+                      <h3 className="pt-10 pb-5 font-semibold text-black">{description.header}</h3>
+                      {description.points.map((point, pointIndex) => (
+                        <li className="mb-3 ml-8 font-normal" key={pointIndex}>{point}</li>
+                      ))}
+                    </div>
+                  ))}
+                </TabPanel>
+              ))}
+            </TabsBody>
+          </Tabs>
+        </div>
       </div>
-    </div>
+
   );
 }

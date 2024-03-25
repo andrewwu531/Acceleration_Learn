@@ -4,7 +4,7 @@ import logo from '../images/logo5.png';
 const NavBar = () => {
 
   return (
-	<nav className="bg-black flex justify-between py-5 items-center">
+	<nav className="flex items-center justify-between py-5 bg-black">
 	
 			<a href="/">
 				<img className="h-14" src={logo} alt="Logo"/>

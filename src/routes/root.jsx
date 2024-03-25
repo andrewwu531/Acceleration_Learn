@@ -1,22 +1,26 @@
-import Courses from '../components/Courses';
 import NavBar from '../components/NavBar';
-import CoursesTablev2 from '../components/CoursesTablev2';
+import SixCourses from '../components/SixCourses';
+import FiveCoursesTab from '../components/FiveCoursesTab';
 import CoachPic1 from '../components/CoachPic1';
 import Footer from '../components/Footer';
+
+// Issues 
+// 1. Firebase Hosting
+// 2. Tab horizontal line
+// 3. Auto indentation and code suggestions cannot be applied
 
 function Root() {
 
   return ( 
     <div>
 
-     
         <NavBar />
     
-        <Courses />
+        <SixCourses />
 
         <CoachPic1 />
 
-        <CoursesTablev2 />      
+        <FiveCoursesTab />      
 
         <Footer />
 

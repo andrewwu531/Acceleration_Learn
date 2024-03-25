@@ -16,16 +16,17 @@ const Footer = () => {
 						<img className="h-14" src={logo} alt="Logo"/>
 					</a>
 					
-					<Typography color="white" className="pr-5 text-sm font-medium text-center pt-9">
-						&copy; 2024 
-					</Typography>
-			
-				
 				</div>
 				
 				<div className="hidden xl:block xl:w-auto">
 
 					<ol className="items-center xl:flex xl:space-x-8 xl:font-medium xl:text-white xl:pr-20">
+			
+						<li>
+							<Typography color="white" className='font-medium'>
+								&copy; 2024  
+							</Typography>
+						</li>
 						<li>
 							<a href="/" className=" hover:text-gray-300">Instagram</a>
 						</li>
