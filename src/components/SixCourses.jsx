@@ -7,7 +7,7 @@ import mind from '../images/mind.png';
 
 const data = [
   { id: 1, title: 'Shredded Body in 2 Months', description: 'Mastering Bodybuilding in 3 hours', imageUrl: shreddedbody, url: "/weightlifting-course" },
-  { id: 2, title: '100+ Key Topic Articles & Journals in Videos', description: 'Establish Your Social Knowledge Set', imageUrl: articles, url: "/" },
+  { id: 2, title: 'The Social Language Accelerator', description: '100+ Key Topic Articles & Journals in Videos', imageUrl: articles, url: "/" },
   { id: 3, title: 'The Confident Speaking Course', description: 'The English Pronunciation & Speech Programme', imageUrl: pronunciation, url: "/"  },
   { id: 4, title: 'The Ultimate Writing Course', description: 'Comedy & Storytelling Principles', imageUrl: writing, url: "/weightlifting-course" },
   { id: 5, title: 'The Business English Book', description: '100+ Business Writing Articles - Explained', imageUrl: businssEnglish, url: "/"  },
@@ -17,6 +17,10 @@ const data = [
 function Courses() {
   return (
     <div className="bg-gray-150" style={{ marginTop: "6vh", marginBottom: "12vh" }}>
+
+      <div className="flex justify-center text-3xl font-semibold text-center underline"  style={{ marginTop: "5vh"}}>
+            No Success, No Fee!
+      </div>  
 
       <div className="flex items-center justify-center pt-10 pb-10 mx-auto xl:max-w-5xl lg:max-w-4xl">
 

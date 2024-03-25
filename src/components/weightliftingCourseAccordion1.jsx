@@ -70,7 +70,7 @@ export default function AccordionCustomIcon() {
 
      <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "17vh"}}>
 
-      <div className="flex justify-center text-2xl font-semibold text-center underline xl:text-3xl"  style={{ marginTop: "7vh"}}>
+      <div className="flex justify-center text-2xl font-semibold text-center underline xl:text-3xl"  style={{ marginTop: "12vh"}}>
             The Only Nutrition & Weightlifting Programme You Will Ever Need!
       </div>  
       
