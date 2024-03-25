@@ -104,12 +104,12 @@ export default function UnderlineTabs() {
    return (
     
       <div className="bg-gray-150">
-        <div className="flex justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
+        <div className="flex items-start justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
           <Tabs value={activeTab}>
             <TabsHeader
-              className="bg-transparent border-b rounded-none h-30 border-blue-gray-50"
+              className="bg-transparent border-b rounded-none border-blue-gray-50"
               indicatorProps={{
-                className: "bg-transparent border-b-2 border-gray-800 shadow-none rounded-none h-24",
+                className: "bg-transparent border-b-2 border-gray-700 h-20 shadow-none rounded-none top-3",
                
               }}
             >
