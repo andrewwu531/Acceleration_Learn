@@ -17,7 +17,7 @@
             I’m Andrew. I am a Hong Kong UK immigrant who came to the UK at the age of 13 in 2009. 
 
             <br /><br />
-            My life in the UK has been too good to be true and also has full of challenges and tears. 
+            My life in the UK has been too good to be true and also full of challenges and tears. 
             I did not speak the right English pronunciation 
             nor was I able to communicate fluently with other people when I first started living in the UK for many years.
             
