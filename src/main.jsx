@@ -8,6 +8,7 @@ import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import WeightliftingCourse from "./routes/weightliftingCourse";
+import Footer from "./routes/footerContents";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/weightlifting-course",
     element: <WeightliftingCourse />,
+  },
+  {
+    path: "/footer-contents",
+    element: <Footer />,
   },
 ]);
 

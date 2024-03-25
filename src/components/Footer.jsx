@@ -28,13 +28,16 @@ const Footer = () => {
 							</Typography>
 						</li>
 						<li>
-							<a href="/weightlifting-course" className=" hover:text-gray-300">The Team Mission</a>
+							<a href="/footer-contents" className=" hover:text-gray-300">The Team Mission</a>
 						</li>
 						<li>
-							<a href="/social-media" className="hover:text-gray-300">Contact Us</a>
+							<a href="/footer-contents" className=" hover:text-gray-300">FAQ</a>
 						</li>
 						<li>
-							<a href="/about" className="hover:text-gray-300">Login</a>
+							<a href="/footer-contents" className="hover:text-gray-300">Contact Us</a>
+						</li>
+						<li>
+							<a href="/login" className="hover:text-gray-300">Login</a>
 						</li>
 					</ol>
 
