@@ -14,7 +14,7 @@ export default function UnderlineTabs() {
     {
       label: "Programme 1: Nutrition & Weightlifting",
       value: "programme 1: Nutrition & Weightlifting",
-      desc: [
+      descriptions: [
         {
           header: "Nutrition",
           points: [
@@ -26,21 +26,21 @@ export default function UnderlineTabs() {
             "1.6. Practical recipes & cooking appliances",
           ],
         },
-        {
-          header: "Weightlifting",
-          points: [
-            "2.1. Muscle Types & Training Methods",
-            "2.2. Weightlifting Techniques",
-            "2.3. A Practical Gym Session",
-            "2.4. HIIT & Calisthenics & Plyometric",
-          ],
-        },
+        // {
+        //   header: "Weightlifting",
+        //   points: [
+        //     "2.1. Muscle Types & Training Methods",
+        //     "2.2. Weightlifting Techniques",
+        //     "2.3. A Practical Gym Session",
+        //     "2.4. HIIT & Calisthenics & Plyometric",
+        //   ],
+        // },
       ],
     },
     {
       label: "Programme 2: 100+ Topic-Based Journals with Videos",
       value: "programme 2: 100+ Topic-Based Journals with Videos",
-      desc: [
+      descriptions: [
         {
           header: "Social Knowledge Accelerator",
           points: [
@@ -56,7 +56,7 @@ export default function UnderlineTabs() {
     {
       label: "Programme 3: The English Pronunciation & Speaking Course",
       value: "programme 3: The English Pronunciation & Speaking Course",
-      desc: [
+      descriptions: [
         {
           header: "The English Speaking Course",
           points: [
@@ -71,14 +71,14 @@ export default function UnderlineTabs() {
     {
       label: "Programme 4: The English Writing Course",
       value: "programme 4: The English Writing Course",
-      desc: [
+      descriptions: [
         {
           header: "The English Writing Course",
           points: [
             "1.1. Why emotional tapping & sense of humour important",
-            "1.2. Comedy Writing Principles",
-            "1.3. Storytelling Principles",
-            "1.4. 40+ Comedy shows word-by-word scripts with analysis",
+            "1.2. Comedy writing principles",
+            "1.3. Storytelling principles",
+            "1.4. 40+ word-by-word comedy show scripts with analysis",
           ],
         },
       ],
@@ -86,7 +86,7 @@ export default function UnderlineTabs() {
     {
       label: "Programme 5: The Mastermind Psychology Course",
       value: "programme 5: The Mastermind Psychology Course",
-      desc: [
+      descriptions: [
         {
           header: "Nurture Your Mind",
           points: [
@@ -107,9 +107,10 @@ export default function UnderlineTabs() {
         <div className="flex justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
           <Tabs value={activeTab}>
             <TabsHeader
-              className="p-0 bg-transparent border-b rounded-none border-blue-gray-50"
+              className="bg-transparent border-b rounded-none h-30 border-blue-gray-50"
               indicatorProps={{
-                className: "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+                className: "bg-transparent border-b-2 border-gray-800 shadow-none rounded-none h-24",
+               
               }}
             >
               {data.map(({ label, value }) => (
@@ -124,10 +125,14 @@ export default function UnderlineTabs() {
                 </Tab>
               ))}
             </TabsHeader>
+
             <TabsBody className="ml-10 ">
-              {data.map(({ value, desc }) => (
+
+              {data.map(({ value, descriptions }) => (
+
                 <TabPanel key={value} value={value}>
-                  {desc.map((description, index) => (
+
+                  {descriptions.map((description, index) => (
                     <div key={index}>
                       <h3 className="pt-10 pb-5 font-semibold text-black">{description.header}</h3>
                       {description.points.map((point, pointIndex) => (
@@ -135,9 +140,12 @@ export default function UnderlineTabs() {
                       ))}
                     </div>
                   ))}
+
                 </TabPanel>
               ))}
+              
             </TabsBody>
+
           </Tabs>
         </div>
       </div>

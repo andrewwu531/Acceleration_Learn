@@ -28,7 +28,7 @@ const Footer = () => {
 							</Typography>
 						</li>
 						<li>
-							<a href="/weightlifting-course" className=" hover:text-gray-300">Mission & The Team</a>
+							<a href="/weightlifting-course" className=" hover:text-gray-300">The Team Mission</a>
 						</li>
 						<li>
 							<a href="/social-media" className="hover:text-gray-300">Contact Us</a>
