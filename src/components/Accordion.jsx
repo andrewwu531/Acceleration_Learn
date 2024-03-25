@@ -1,11 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, descriptions }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-2">
+    <div className="py-3 border border-black">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full"
@@ -52,7 +52,7 @@ const Accordion = ({ title, answer }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">{answer}</div>
+        <div className="py-2 overflow-hidden">{descriptions}</div>
       </div>
     </div>
   );
@@ -60,7 +60,7 @@ const Accordion = ({ title, answer }) => {
 
 Accordion.propTypes = {
   title: PropTypes.string.isRequired,
-  answer: PropTypes.node.isRequired,
+  descriptions: PropTypes.node.isRequired,
 };
 
 export default Accordion;

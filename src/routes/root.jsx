@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 // 1. Firebase Hosting
 // 2. Tab horizontal line
 // 3. Auto indentation and code suggestions cannot be applied
+// 4. Add Excel Doc Link in homepage
 
 function Root() {
 
