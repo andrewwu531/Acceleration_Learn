@@ -68,7 +68,7 @@ export default function AccordionCustomIcon() {
  
   return (
 
-     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150">
+     <div className="flex flex-col items-center justify-center pb-10 mb-10 mx-atuo bg-gray-150">
 
       <div className="text-4xl font-semibold underline"  style={{ marginTop: "9vh"}}>
             The Only Nutrition and Weightlifting Programme You Will Ever Need!
