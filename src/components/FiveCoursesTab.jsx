@@ -5,7 +5,9 @@ import {
   TabsBody,
   Tab,
   TabPanel,
+  Button,
 } from "@material-tailwind/react";
+
 
 
 export default function UnderlineTabs() {
@@ -14,6 +16,8 @@ export default function UnderlineTabs() {
     {
       label: "Programme 1: Nutrition & Weightlifting",
       value: "programme 1: Nutrition & Weightlifting",
+      url: "/weightlifting-course",
+      button: "Nutrition & Weightlifting",
       descriptions: [
         {
           header: "Nutrition",
@@ -40,6 +44,8 @@ export default function UnderlineTabs() {
     {
       label: "Programme 2: 100+ Topic-Based Journals with Videos",
       value: "programme 2: 100+ Topic-Based Journals with Videos",
+      url: "/english-course",
+      button: "English Language",
       descriptions: [
         {
           header: "Social Knowledge Accelerator",
@@ -56,6 +62,8 @@ export default function UnderlineTabs() {
     {
       label: "Programme 3: The English Pronunciation & Speaking Course",
       value: "programme 3: The English Pronunciation & Speaking Course",
+      url: "/english-course",
+      button: "English Language",
       descriptions: [
         {
           header: "The English Speaking Course",
@@ -71,6 +79,8 @@ export default function UnderlineTabs() {
     {
       label: "Programme 4: The English Writing Course",
       value: "programme 4: The English Writing Course",
+      url: "/english-course",
+      button: "English Language",
       descriptions: [
         {
           header: "The English Writing Course",
@@ -86,6 +96,8 @@ export default function UnderlineTabs() {
     {
       label: "Programme 5: The Mastermind Psychology Course",
       value: "programme 5: The Mastermind Psychology Course",
+      url: "/english-course",
+      button: "English Language",
       descriptions: [
         {
           header: "Nurture Your Mind",
@@ -126,20 +138,27 @@ export default function UnderlineTabs() {
               ))}
             </TabsHeader>
 
-            <TabsBody className="ml-10 ">
+            <TabsBody>
 
-              {data.map(({ value, descriptions }) => (
+              {data.map(({ value, descriptions, button }) => (
 
                 <TabPanel key={value} value={value}>
 
                   {descriptions.map((description, index) => (
-                    <div key={index}>
-                      <h3 className="pt-10 pb-5 font-semibold text-black">{description.header}</h3>
+                    <div className="ml-10" key={index}>
+                      <h3 className="py-10 font-semibold text-black pb-30">{description.header}</h3>
                       {description.points.map((point, pointIndex) => (
                         <li className="mb-3 ml-8 font-normal" key={pointIndex}>{point}</li>
                       ))}
                     </div>
                   ))}
+
+                  <div className="flex items-center justify-center" style={{ paddingTop: "6vh" }}>
+                     <Button size="lg" color="white" className="flex items-center justify-center gap-4 px-10 py-4">
+                          <div>Check out our {button} course </div>
+                          <div> {">>>"} </div>
+                      </Button>
+                  </div>
 
                 </TabPanel>
               ))}

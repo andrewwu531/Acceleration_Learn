@@ -1,14 +1,15 @@
 import NavBar from '../components/NavBar';
 import SixCourses from '../components/SixCourses';
-import FiveCoursesTab from '../components/FiveCoursesTab';
+import WeightliftingCourseAccordion1  from '../components/WeightliftingCourseAccordion1';
 import CoachPic1 from '../components/CoachPic1';
 import Footer from '../components/Footer';
 
+
 // Issues 
 // 1. Firebase Hosting
-// 2. Tab horizontal line
-// 3. Auto indentation and code suggestions cannot be applied
-// 4. Add Excel Doc Link in homepage
+// 2. Auto indentation and code suggestions cannot be applied
+// 3. Add Excel Doc Link in homepage
+// 4. Design personalised photos & videos once you have implemented everything
 
 function Root() {
 
@@ -21,7 +22,9 @@ function Root() {
 
         <CoachPic1 />
 
-        <FiveCoursesTab />      
+        {/* <FiveCoursesTab />       */}
+
+        <WeightliftingCourseAccordion1 />
 
         <Footer />
 
