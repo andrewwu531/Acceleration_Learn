@@ -10,9 +10,9 @@ const NavBar = () => {
 				<img className="h-14" src={logo} alt="Logo"/>
 			</a>
 
-			<div className="hidden xl:block xl:w-auto">
+			<div className="hidden lg:block lg:w-auto">
 
-				<ol className="xl:flex xl:space-x-8 xl:font-medium xl:text-white xl:pr-20">
+				<ol className="lg:flex lg:space-x-8 lg:font-medium lg:text-white lg:pr-20">
 					<li>
 						<a href="/" className=" hover:text-gray-300">Home</a>
 					</li>

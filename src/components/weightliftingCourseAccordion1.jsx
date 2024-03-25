@@ -68,16 +68,16 @@ export default function AccordionCustomIcon() {
  
   return (
 
-     <div className="flex flex-col items-center justify-center pb-10 mb-10 mx-atuo bg-gray-150">
+     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "17vh"}}>
 
-      <div className="text-4xl font-semibold underline"  style={{ marginTop: "9vh"}}>
-            The Only Nutrition and Weightlifting Programme You Will Ever Need!
+      <div className="flex justify-center text-2xl font-semibold text-center underline xl:text-3xl"  style={{ marginTop: "7vh"}}>
+            The Only Nutrition & Weightlifting Programme You Will Ever Need!
       </div>  
       
       <img 
         src={WeightliftingBanner2} 
         alt="WeightliftingBanner2" 
-        style={{ marginTop: "6vh", marginBottom: "5vh", height: "40vh", width: "80vh" }}
+        style={{ marginTop: "6vh", marginBottom: "8vh", height: "40vh", width: "80vh" }}
         className="rounded-lg"
       />
 

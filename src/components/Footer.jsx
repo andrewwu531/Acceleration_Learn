@@ -28,10 +28,7 @@ const Footer = () => {
 							</Typography>
 						</li>
 						<li>
-							<a href="/" className=" hover:text-gray-300">Instagram</a>
-						</li>
-						<li>
-							<a href="/weightlifting-course" className=" hover:text-gray-300">About Us</a>
+							<a href="/weightlifting-course" className=" hover:text-gray-300">Mission & The Team</a>
 						</li>
 						<li>
 							<a href="/social-media" className="hover:text-gray-300">Contact Us</a>
