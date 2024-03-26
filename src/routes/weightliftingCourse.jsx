@@ -14,9 +14,9 @@ function WeightliftingCourse() {
       
         <NutritionCourseBanner />
         
-        <WeightliftingCourseAccordion />
-
         <NutritionCourseAccordion />
+        
+        <WeightliftingCourseAccordion />
 
         <div style={{ marginBottom: "15vh" }}></div>
 

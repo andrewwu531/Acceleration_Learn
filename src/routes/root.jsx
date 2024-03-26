@@ -1,8 +1,8 @@
 import NavBar from '../components/NavBar';
 import SixCourses from '../components/SixCourses';
-import WeightliftingCourseAccordion  from '../components/NutritionCourseAccordion';
+import NutritionCourseAccordion  from '../components/NutritionCourseAccordion';
 import NutritionCourseBanner from '../components/NutritionCourseBanner';
-import NutritionCourseAccordion from '../components/WeightliftingCourseAccordion';
+import WeightliftingCourseAccordion from '../components/WeightliftingCourseAccordion';
 import EnglishCourseBanner from '../components/EnglishCourseBanner';
 import SocialCourseAccordion from '../components/SocialCourseAccordion';
 import SpeakingCourseAccordion from '../components/SpeakingCourseAccordion';
@@ -41,7 +41,7 @@ function Root() {
         <NutritionCourseBanner />
 
         <NutritionCourseAccordion />
-
+  
         <WeightliftingCourseAccordion />
 
         {/* ... */}
