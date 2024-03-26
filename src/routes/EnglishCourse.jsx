@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar';
+import EnglishCourseBanner from '../components/EnglishCourseBanner';
 import SocialCourseAccordion from '../components/SocialCourseAccordion';
 import SpeakingCourseAccordion from '../components/SpeakingCourseAccordion';
 import WritingCourseAccordion from '../components/WritingCourseAccordion';
@@ -13,6 +14,8 @@ function EnglishCourse() {
     <div>
      
         <NavBar />
+
+        <EnglishCourseBanner />
       
         <SocialCourseAccordion />
 

@@ -24,7 +24,7 @@ function Courses() {
 
       <div className="flex items-center justify-center pt-10 pb-10 mx-auto xl:max-w-5xl lg:max-w-4xl">
 
-        <div className="grid grid-flow-col xl:gap-2 gap-1.5">
+        <div className="grid grid-cols-6 grid-flow-col xl:gap-2 gap-1.5">
             {data.map(card => (
                 <a href={card.url} key={card.id} className="cursor-pointer">
                   <img src={card.imageUrl} alt="card" className="items-center justify-center mx-auto rounded-lg" style={{ width: '100%', height: '77%' }} />

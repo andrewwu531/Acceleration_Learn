@@ -29,39 +29,52 @@ export default function NutritionCourseAccordion() {
 
    const data = [
     {
-      title: "Course 2.1. Muscle Types & Training Methods",
-      content: "Hi1",
+      title: "Course 1.1. Access our free Excel material",
+      content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
       pk: "1",
     },
     {
-      title: "Course 2.2. Weightlifting Techniques",
-      content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
+      title: "Course 1.2. Bodybuilding is 80% dieting & 20% workout",
+      content: "Hi",
       pk: "2",
-    },
+    },    
     {
-      title: "Course 2.3. A Practical Gym Session",
+      title: "Course 1.3. Why the medium calories, high protein, medium carbohydrate & low fat diet",
       content: "Hi",
       pk: "3",
     },    
     {
-      title: "Course 2.4. HIIT & Calisthenics & Plyometric",  
+      title: "Course 1.4. Calculating your personalised recommended calories, protein, carbohydrate & fat intake",
       content: "Hi",
       pk: "4",
-    },    
+    }, 
+    {
+      title: "Course 1.5. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
+      content: "Hi",
+      pk: "5",
+    }, 
+    {
+      title: "Course 1.6. Carb cycling & the front heavy approach dieting",
+      content: "Hi",
+      pk: "6",
+    }, 
+    {
+      title: "Course 1.7. Practical recipes & cooking appliances",
+      content: "Hi",
+      pk: "7",
+    }, 
   ]
  
   return (
 
-     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150">
-
-      <div>
+     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
 
         <div className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"  style={{ marginBottom: "5vh"}}>
             Shredded Body in 2 Months: Nutrition
-        </div>  
-
-        <div style={{ width: "62vw" }}>
+      </div>  
       
+      <div style={{ width: "62vw" }}>
+
         {data.map(({ title, content, pk }) => (
             <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
                 <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
@@ -69,10 +82,10 @@ export default function NutritionCourseAccordion() {
             </Accordion>
         ))}
 
-        </div>
+      </div>
       
       </div>
-    </div>
+    
   );
 }
 

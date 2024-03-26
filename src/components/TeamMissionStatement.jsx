@@ -22,15 +22,15 @@
             nor was I able to communicate fluently with other people when I first started living in the UK for many years.
             
             <br /><br />
-            The mission of these programmes is not solely for financial gains. 
-            They are the unique skill sets that I want to share with you 
-            because I don’t want you to struggle in life just like I did.
+            The mission of these programmes is to share with you the unique skill sets that
+            I have acquired through my university degree and life experience.
+            I don’t want you to struggle in life just like I did.
             
             <br /><br />
             I share your present pain and suffering. 
             I want you to live a life that is worth living instead of letting time pass by simply
             because you are not equipped with the knowledge and skills 
-            that would enable you to achieve and live the life you aspire and deserve.
+            that would enable you to achieve and live the greater version of life that you aspire and deserve.
             
             <br /><br />
             I developed these programmes with all of my heart. 
@@ -38,10 +38,7 @@
             and I want you to gain the same skill sets with me in a much shorter time frame.
             
             <br /><br />
-            I hope you will find my courses practical and of use.
-            
-            <br /><br />
-            I also sincerely wish that you will achieve more than me.
+            I hope you will find my courses practical and of use and I also sincerely wish that you will achieve more than me.
             
             <br /><br />
             Regards,<br /><br />

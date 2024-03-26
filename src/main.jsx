@@ -7,6 +7,7 @@ import {
 import "./index.css";
 import Root from "./routes/Root"; 
 import ErrorPage from "./error-page";
+import Login from "./routes/Login";
 import WeightliftingCourse from "./routes/WeightliftingCourse";
 import EnglishCourse from "./routes/EnglishCourse";
 import Footer from "./routes/FooterContents";
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/weightlifting-course",

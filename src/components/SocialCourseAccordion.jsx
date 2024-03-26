@@ -5,8 +5,6 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
-import WeightliftingBanner2 from "../images/weightliftingBanner2.png";
-
  
 function Icon({ id, open }) {
   return (
@@ -69,18 +67,7 @@ export default function SocialCourseAccordion() {
   return (
 
      <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
-
-      <div className="flex justify-center text-2xl font-semibold text-center underline xl:text-3xl"  style={{ marginTop: "12vh"}}>
-        You Will Become A Native English Speaker With Acceleration Learn! 
-      </div>  
       
-      <img 
-        src={WeightliftingBanner2} 
-        alt="WeightliftingBanner2" 
-        style={{ marginTop: "6vh", marginBottom: "8vh", height: "40vh", width: "80vh" }}
-        className="rounded-lg"
-      />
-
       <div>
 
         <div className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"  style={{ marginBottom: "5vh"}}>
