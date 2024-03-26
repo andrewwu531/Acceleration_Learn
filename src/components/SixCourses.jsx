@@ -7,11 +7,11 @@ import mind from '../images/mind.png';
 
 const data = [
   { id: 1, title: 'Shredded Body in 2 Months', description: 'Mastering Bodybuilding in 3 hours', imageUrl: shreddedbody, url: "/weightlifting-course" },
-  { id: 2, title: 'The Social Language Accelerator', description: '100+ Key Topic Articles & Journals in Videos', imageUrl: articles, url: "/" },
-  { id: 3, title: 'The Confident Speaking Course', description: 'The English Pronunciation & Speech Programme', imageUrl: pronunciation, url: "/"  },
-  { id: 4, title: 'The Ultimate Writing Course', description: 'Comedy & Storytelling Principles', imageUrl: writing, url: "/weightlifting-course" },
-  { id: 5, title: 'The Business English Book', description: '100+ Business Writing Articles - Explained', imageUrl: businssEnglish, url: "/"  },
-  { id: 6, title: 'The Mind of a Guru', description: 'The Psychological Mindset of Every Legend', imageUrl: mind, url: "/weightlifting-course" },
+  { id: 2, title: 'The Social Language Accelerator', description: '100+ Key Topic Articles & Journals in Videos', imageUrl: articles, url: "/english-course" },
+  { id: 3, title: 'The Confident Speaking Course', description: 'The English Pronunciation & Speech Programme', imageUrl: pronunciation, url: "/english-course" },
+  { id: 4, title: 'The Ultimate Writing Course', description: 'Comedy & Storytelling Principles', imageUrl: writing, url: "/english-course" },
+  { id: 5, title: 'The Business English Book', description: '100+ Business Writing Articles - Explained', imageUrl: businssEnglish, url: "/english-course" },
+  { id: 6, title: 'The Mind of a Guru', description: 'The Psychological Mindset of Every Legend', imageUrl: mind, url: "/english-course" },
 ]
 
 function Courses() {
