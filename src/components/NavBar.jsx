@@ -20,7 +20,7 @@ const NavBar = () => {
 						<a href="/weightlifting-course" className=" hover:text-gray-300">Nutrition & Weightlifting</a>
 					</li>
 					<li>
-						<a href="/social-media" className="hover:text-gray-300">Social & Business English Language</a>
+						<a href="/english-course" className="hover:text-gray-300">Social & Business English Language</a>
 					</li>
 					<li>
 						<a href="/about" className="hover:text-gray-300">Login</a>

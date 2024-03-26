@@ -23,7 +23,7 @@ function Icon({ id, open }) {
   );
 }
  
-export default function AccordionCustomIcon() {
+export default function SocialCourseAccordion() {
   const [open, setOpen] = React.useState(0);
  
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -35,17 +35,17 @@ export default function AccordionCustomIcon() {
       pk: "1",
     },
     {
-      title: "Course 1.2. Bodybuilding is 80% dieting & 20% workout",
+      title: "Course 1.2. Why emotional tapping & sense of humour important in writing",
       content: "Hi",
       pk: "2",
     },    
     {
-      title: "Course 1.3. Why the medium calories, high protein, medium carbohydrate & low fat diet",
+      title: "Course 1.3. Comedy writing principles",
       content: "Hi",
       pk: "3",
     },    
     {
-      title: "Course 1.4. Calculating your personalised recommended calories, protein, carbohydrate & fat intake",
+      title: "Course 1.4. Storytelling principles with ",
       content: "Hi",
       pk: "4",
     }, 
@@ -68,10 +68,10 @@ export default function AccordionCustomIcon() {
  
   return (
 
-     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "17vh"}}>
+     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
 
       <div className="flex justify-center text-2xl font-semibold text-center underline xl:text-3xl"  style={{ marginTop: "12vh"}}>
-            The Only Nutrition & Weightlifting Programme You Will Ever Need!
+        You Will Become A Native English Speaker With Acceleration Learn! 
       </div>  
       
       <img 
@@ -82,13 +82,21 @@ export default function AccordionCustomIcon() {
       />
 
       <div>
+
+        <div className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"  style={{ marginBottom: "5vh"}}>
+            The Social Language Accelerator
+      </div>  
       
+      <div style={{ width: "62vw" }}>
+
         {data.map(({ title, content, pk }) => (
             <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
-                <AccordionHeader onClick={() => handleOpen(pk)} className="text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
+                <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
                 <AccordionBody className="text-sm xl:text-base">{content}</AccordionBody>
             </Accordion>
         ))}
+
+      </div>
       
       </div>
     </div>

@@ -5,10 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Root from "./routes/root";
+import Root from "./routes/Root"; 
 import ErrorPage from "./error-page";
-import WeightliftingCourse from "./routes/weightliftingCourse";
-import Footer from "./routes/footerContents";
+import WeightliftingCourse from "./routes/WeightliftingCourse";
+import EnglishCourse from "./routes/EnglishCourse";
+import Footer from "./routes/FooterContents";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/weightlifting-course",
     element: <WeightliftingCourse />,
+  },
+  {
+    path: "/english-course",
+    element: <EnglishCourse />,
   },
   {
     path: "/footer-contents",

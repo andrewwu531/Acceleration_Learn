@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
-import WeightliftingCourseAccordion1 from '../components/WeightliftingCourseAccordion1';
+import WeightliftingCourseAccordion from '../components/WeightliftingCourseAccordion';
+import NutritionCourseAccordion from '../components/NutritionCourseAccordion';
 import Footer from '../components/Footer';
 
 
@@ -10,7 +11,11 @@ function WeightliftingCourse() {
      
         <NavBar />
       
-        <WeightliftingCourseAccordion1 />
+        <WeightliftingCourseAccordion />
+
+        <NutritionCourseAccordion />
+
+        <div style={{ marginBottom: "15vh" }}></div>
 
         <Footer />
 

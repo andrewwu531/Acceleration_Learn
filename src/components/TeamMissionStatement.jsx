@@ -44,8 +44,9 @@
             I also sincerely wish that you will achieve more than me.
             
             <br /><br />
-            Regards,<br />
-            Andrew Wu
+            Regards,<br /><br />
+            Andrew Wu<br />
+            Acceleration Learn
         </div>
 
 
