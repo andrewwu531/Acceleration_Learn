@@ -1,10 +1,17 @@
 
-import NavBar from "../components/NavBar";
+import LoginCard from "../components/LoginCard";
 
 function Login() {
 
   return ( 
-    <NavBar />
+
+    <div>
+     
+
+      <LoginCard />
+
+    </div>
+
   )
 }
 
