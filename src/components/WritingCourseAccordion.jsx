@@ -57,7 +57,7 @@ export default function WritingCourseAccordion() {
       <div>
 
         <div className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"  style={{ marginBottom: "5vh"}}>
-            The Ultimate Writing Course
+            The Ultimate Writing Class
         </div>  
 
         <div style={{ width: "62vw" }}>
