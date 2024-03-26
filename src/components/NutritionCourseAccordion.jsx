@@ -5,6 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
+// import video1 from "../videos/video.mp4";
 
  
 function Icon({ id, open }) {
@@ -30,40 +31,73 @@ export default function NutritionCourseAccordion() {
    const data = [
     {
       title: "Course 1.1. Access our free Excel material",
+      contentType: "link",
       content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
       pk: "1",
     },
     {
       title: "Course 1.2. Bodybuilding is 80% dieting & 20% workout",
-      content: "Hi",
+      contentType: "video",
+      content: "/videos/video.mp4",
       pk: "2",
     },    
     {
       title: "Course 1.3. Why the medium calories, high protein, medium carbohydrate & low fat diet",
-      content: "Hi",
+      contentType: "video",
+      content: "/videos/video.mp4",
       pk: "3",
     },    
     {
       title: "Course 1.4. Calculating your personalised recommended calories, protein, carbohydrate & fat intake",
-      content: "Hi",
+      contentType: "text",
+      content: "Easier to satisfy the macronutrient requirements \
+      - you would not need to consume food excessively for one of the three meals. \
+      In other words, if you eat less in the evening, you would require eating more in the morning \
+      or afternoon to compensate for the lesser food consumption in the evening. \
+      Heavy breakfast burns more calories than heavy lunch or dinner - \
+      in science, it is ideal to eat a large meal in the morning. \
+      Given equal quantity, the breakfast meal burns twice the calories compared to lunch or dinner. \
+      This is beneficial for achieving caloric deficit to reduce fat for revealing a six pack. \
+      It boosts energy and reduces hunger - you require high energy for breakfast \
+      and lunch as you work during the day time. \
+      Moreover, you require sufficient food consumption in the evening to prevent muscle loss while sleeping.",
       pk: "4",
     }, 
     {
       title: "Course 1.5. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
-      content: "Hi",
+      contentType: "link",
+      content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
       pk: "5",
     }, 
     {
       title: "Course 1.6. Carb cycling & the front heavy approach dieting",
-      content: "Hi",
+      contentType: "text",
+      content: "Easier to satisfy the macronutrient requirements \
+      - you would not need to consume food excessively for one of the three meals.\
+      In other words, if you eat less in the evening, you would require eating more in the morning \
+      or afternoon to compensate for the lesser food consumption in the evening. ",
       pk: "6",
     }, 
     {
       title: "Course 1.7. Practical recipes & cooking appliances",
-      content: "Hi",
+      contentType: "link",
+      content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
       pk: "7",
     }, 
   ]
+
+   const renderContent = (contentType, content) => {
+    switch (contentType) {
+      case "video":
+        return   <video src={content} controls autoPlay preload="auto" type="video/mp4" className="w-full">
+                    Your browser does not support the video tag.
+                  </video>;
+      case "link":
+        return <a href={content} target="_blank" rel="noopener noreferrer" className="text-xl underline underline-offset-2 text-grey-900 hover:text-grey-900">{content}</a>;
+      default:
+        return <p className="text-xl">{content}</p>;
+    } 
+  };
  
   return (
 
@@ -75,10 +109,10 @@ export default function NutritionCourseAccordion() {
       
       <div style={{ width: "62vw" }}>
 
-        {data.map(({ title, content, pk }) => (
+        {data.map(({ title, content, contentType, pk }) => (
             <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
                 <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
-                <AccordionBody className="text-sm xl:text-base">{content}</AccordionBody>
+                <AccordionBody className="text-sm xl:text-base">{renderContent(contentType, content)}</AccordionBody>
             </Accordion>
         ))}
 
