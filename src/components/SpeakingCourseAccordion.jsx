@@ -3,6 +3,7 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
+  Button,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
 
@@ -69,6 +70,13 @@ export default function SpeakingCourseAccordion() {
             </Accordion>
         ))}
 
+        </div>
+
+        <div>
+          <Button color="gray" className="flex items-center justify-center mx-auto text-2xl font-normal xl:text-3xl 2xl:text-4xl"
+              style={{ marginTop: "7vh", width: "40vw", height: "18vh" }}>
+                Yes - I Want Success
+          </Button>
         </div>
       
       </div>

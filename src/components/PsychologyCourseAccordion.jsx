@@ -3,6 +3,7 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
+  Button,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
 
@@ -52,7 +53,7 @@ export default function PsychologyCourseAccordion() {
  
   return (
 
-     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
+    <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
 
       <div>
 
@@ -62,16 +63,24 @@ export default function PsychologyCourseAccordion() {
 
         <div style={{ width: "62vw" }}>
       
-        {data.map(({ title, content, pk }) => (
-            <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
-                <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
-                <AccordionBody className="text-sm xl:text-base">{content}</AccordionBody>
-            </Accordion>
-        ))}
+          {data.map(({ title, content, pk }) => (
+              <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
+                  <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
+                  <AccordionBody className="text-sm xl:text-base">{content}</AccordionBody>
+              </Accordion>
+          ))}
 
+        </div>
+
+        <div>
+          <Button color="gray" className="flex items-center justify-center mx-auto text-2xl font-normal xl:text-3xl 2xl:text-4xl"
+              style={{ marginTop: "7vh", width: "40vw", height: "18vh" }}>
+                Yes - I Want Success
+          </Button>
         </div>
       
       </div>
+      
     </div>
   );
 }
