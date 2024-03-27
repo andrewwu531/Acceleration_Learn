@@ -17,7 +17,7 @@
             in bodybuilding and acquiring the English language.
 
             <br /><br />
-            We are here to make your life count and we develop these programmes with every resources we can get.
+            We are here to make your life count and we develop these programmes with every resources we can obtain at hand.
             
             <br /><br />
             We urge you to read our free Excel materials and videos -
