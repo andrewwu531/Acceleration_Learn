@@ -1,34 +1,30 @@
-import NavBar from '../components/NavBar';
-import EnglishCourseBanner from '../components/EnglishCourseBanner';
-import SocialCourseAccordion from '../components/SocialCourseAccordion';
-import SpeakingCourseAccordion from '../components/SpeakingCourseAccordion';
-import WritingCourseAccordion from '../components/WritingCourseAccordion';
-import BusinessCourseAccordion from '../components/BusinessCourseAccordion';
-import PsychologyCourseAccordion from '../components/PsychologyCourseAccordion';
-import Footer from '../components/Footer';
-
+import NavBar from "../components/NavBar";
+import EnglishCourseBanner from "../components/EnglishCourseBanner";
+import SocialCourseAccordion from "../components/SocialCourseAccordion";
+import SpeakingCourseAccordion from "../components/SpeakingCourseAccordion";
+import WritingCourseAccordion from "../components/WritingCourseAccordion";
+import BusinessCourseAccordion from "../components/BusinessCourseAccordion";
+import PsychologyCourseAccordion from "../components/PsychologyCourseAccordion";
+import Footer from "../components/Footer";
 
 function EnglishCourse() {
-
-  return ( 
+  return (
     <div>
-     
-        <NavBar />
+      <NavBar />
 
-        <EnglishCourseBanner />
-      
-        <SocialCourseAccordion />
+      <EnglishCourseBanner />
 
-        <SpeakingCourseAccordion />
+      <SocialCourseAccordion />
 
-        <WritingCourseAccordion />
+      <SpeakingCourseAccordion />
 
-        <BusinessCourseAccordion />
+      <WritingCourseAccordion />
 
-        <PsychologyCourseAccordion />
-        
-        <Footer />
+      <BusinessCourseAccordion />
 
+      <PsychologyCourseAccordion />
+
+      <Footer />
     </div>
   );
 }

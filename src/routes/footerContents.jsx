@@ -1,21 +1,17 @@
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import TeamMissionStatement from '../components/TeamMissionStatement';
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import TeamMissionStatement from "../components/TeamMissionStatement";
 
 function TeamMission() {
-
-  return ( 
+  return (
     <div>
+      <NavBar />
 
-        <NavBar />
+      <TeamMissionStatement />
 
-        <TeamMissionStatement />
-
-        <Footer />
-
-
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default TeamMission;

@@ -1,67 +1,63 @@
-import NavBar from '../components/NavBar';
-import SixCourses from '../components/SixCourses';
-import NutritionCourseAccordion  from '../components/NutritionCourseAccordion';
-import NutritionCourseBanner from '../components/NutritionCourseBanner';
-import WeightliftingCourseAccordion from '../components/WeightliftingCourseAccordion';
-import EnglishCourseBanner from '../components/EnglishCourseBanner';
-import SocialCourseAccordion from '../components/SocialCourseAccordion';
-import SpeakingCourseAccordion from '../components/SpeakingCourseAccordion';
-import WritingCourseAccordion from '../components/WritingCourseAccordion';
-import BusinessCourseAccordion from '../components/BusinessCourseAccordion';
-import PsychologyCourseAccordion from '../components/PsychologyCourseAccordion';
-import CoachPic1 from '../components/CoachPic1';
-import Footer from '../components/Footer';
+import NavBar from "../components/NavBar";
+import SixCourses from "../components/SixCourses";
+import NutritionCourseAccordion from "../components/NutritionCourseAccordion";
+import NutritionCourseBanner from "../components/NutritionCourseBanner";
+import WeightliftingCourseAccordion from "../components/WeightliftingCourseAccordion";
+import EnglishCourseBanner from "../components/EnglishCourseBanner";
+import SocialCourseAccordion from "../components/SocialCourseAccordion";
+import SpeakingCourseAccordion from "../components/SpeakingCourseAccordion";
+import WritingCourseAccordion from "../components/WritingCourseAccordion";
+import BusinessCourseAccordion from "../components/BusinessCourseAccordion";
+import PsychologyCourseAccordion from "../components/PsychologyCourseAccordion";
+import CoachPic1 from "../components/CoachPic1";
+import Footer from "../components/Footer";
 
-
-// Issues 
+// Issues
 // 1. Firebase Hosting
 // 2. Auto indentation and code suggestions cannot be applied
 
 // Next Steps
 // 3. Add Excel Doc Link section above course accordion in homepage
 // 6. Payment Page for all courses > Billing Page (Courses in Cart + Total Price + Login & Card Details + Pay)
-// 7. Login functionality + payment confirmation email 
-// 8. Personalised account page (courses purchased + courses not purchased) 
+// 7. Login functionality + payment confirmation email
+// 8. Personalised account page (courses purchased + courses not purchased)
 // 9. Course contents for each course in personal account
 // 4. Design personalised photos & videos once you have implemented everything
 
 function Root() {
-
-  return ( 
+  return (
     <div>
+      <NavBar />
 
-        <NavBar />
-    
-        <SixCourses />
+      <SixCourses />
 
-        <CoachPic1 />
+      <CoachPic1 />
 
-        {/* ... */}
+      {/* ... */}
 
-        <NutritionCourseBanner />
+      <NutritionCourseBanner />
 
-        <NutritionCourseAccordion />
-  
-        <WeightliftingCourseAccordion />
+      <NutritionCourseAccordion />
 
-        {/* ... */}
+      <WeightliftingCourseAccordion />
 
-        <EnglishCourseBanner />
+      {/* ... */}
 
-        <SocialCourseAccordion />
+      <EnglishCourseBanner />
 
-        <SpeakingCourseAccordion />
+      <SocialCourseAccordion />
 
-        <WritingCourseAccordion />
+      <SpeakingCourseAccordion />
 
-        <BusinessCourseAccordion />
+      <WritingCourseAccordion />
 
-        <PsychologyCourseAccordion />
+      <BusinessCourseAccordion />
 
-        <div style={{ marginBottom: "15vh" }}></div>
+      <PsychologyCourseAccordion />
 
-        <Footer />
+      <div style={{ marginBottom: "15vh" }}></div>
 
+      <Footer />
     </div>
   );
 }

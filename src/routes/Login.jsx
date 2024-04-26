@@ -1,18 +1,11 @@
-
 import LoginCard from "../components/LoginCard";
 
 function Login() {
-
-  return ( 
-
+  return (
     <div>
-     
-
       <LoginCard />
-
     </div>
-
-  )
+  );
 }
 
 export default Login;

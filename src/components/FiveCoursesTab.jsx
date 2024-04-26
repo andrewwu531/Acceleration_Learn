@@ -8,10 +8,10 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-
-
 export default function UnderlineTabs() {
-  const [activeTab, setActiveTab] = React.useState("programme 1: Nutrition & Weightlifting");
+  const [activeTab, setActiveTab] = React.useState(
+    "programme 1: Nutrition & Weightlifting",
+  );
   const data = [
     {
       label: "Programme 1: Nutrition & Weightlifting",
@@ -113,61 +113,66 @@ export default function UnderlineTabs() {
     },
   ];
 
-   return (
-    
-      <div className="bg-gray-150">
-        <div className="flex items-start justify-center mx-auto xl:max-w-6xl lg:max-w-5xl" style={{ marginTop: "15vh", marginBottom: "7vh" }}>
-          <Tabs value={activeTab}>
-            <TabsHeader
-              className="bg-transparent border-b rounded-none border-blue-gray-50"
-              indicatorProps={{
-                className: "bg-transparent border-b-2 border-gray-700 h-20 shadow-none rounded-none top-3",
-               
-              }}
-            >
-              {data.map(({ label, value }) => (
-                <Tab
-                  key={value}
-                  value={value}
-                  onClick={() => setActiveTab(value)}
-                  className={activeTab === value ? "text-gray-900" : ""}
-                  
-                >
-                  <div className="font-medium">{label}</div>
-                </Tab>
-              ))}
-            </TabsHeader>
+  return (
+    <div className="bg-gray-150">
+      <div
+        className="flex items-start justify-center mx-auto xl:max-w-6xl lg:max-w-5xl"
+        style={{ marginTop: "15vh", marginBottom: "7vh" }}
+      >
+        <Tabs value={activeTab}>
+          <TabsHeader
+            className="bg-transparent border-b rounded-none border-blue-gray-50"
+            indicatorProps={{
+              className:
+                "bg-transparent border-b-2 border-gray-700 h-20 shadow-none rounded-none top-3",
+            }}
+          >
+            {data.map(({ label, value }) => (
+              <Tab
+                key={value}
+                value={value}
+                onClick={() => setActiveTab(value)}
+                className={activeTab === value ? "text-gray-900" : ""}
+              >
+                <div className="font-medium">{label}</div>
+              </Tab>
+            ))}
+          </TabsHeader>
 
-            <TabsBody>
-
-              {data.map(({ value, descriptions, button }) => (
-
-                <TabPanel key={value} value={value}>
-
-                  {descriptions.map((description, index) => (
-                    <div className="ml-10" key={index}>
-                      <h3 className="py-10 font-semibold text-black pb-30">{description.header}</h3>
-                      {description.points.map((point, pointIndex) => (
-                        <li className="mb-3 ml-8 font-normal" key={pointIndex}>{point}</li>
-                      ))}
-                    </div>
-                  ))}
-
-                  <div className="flex items-center justify-center" style={{ paddingTop: "6vh" }}>
-                     <Button size="lg" color="white" className="flex items-center justify-center gap-4 px-10 py-4">
-                          <div>Check out our {button} course </div>
-                          <div> {">>>"} </div>
-                      </Button>
+          <TabsBody>
+            {data.map(({ value, descriptions, button }) => (
+              <TabPanel key={value} value={value}>
+                {descriptions.map((description, index) => (
+                  <div className="ml-10" key={index}>
+                    <h3 className="py-10 font-semibold text-black pb-30">
+                      {description.header}
+                    </h3>
+                    {description.points.map((point, pointIndex) => (
+                      <li className="mb-3 ml-8 font-normal" key={pointIndex}>
+                        {point}
+                      </li>
+                    ))}
                   </div>
+                ))}
 
-                </TabPanel>
-              ))}
-              
-            </TabsBody>
-
-          </Tabs>
-        </div>
+                <div
+                  className="flex items-center justify-center"
+                  style={{ paddingTop: "6vh" }}
+                >
+                  <Button
+                    size="lg"
+                    color="white"
+                    className="flex items-center justify-center gap-4 px-10 py-4"
+                  >
+                    <div>Check out our {button} course </div>
+                    <div> {">>>"} </div>
+                  </Button>
+                </div>
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
       </div>
-
+    </div>
   );
 }

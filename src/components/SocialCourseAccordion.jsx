@@ -6,7 +6,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
- 
+
 function Icon({ id, open }) {
   return (
     <svg
@@ -17,84 +17,106 @@ function Icon({ id, open }) {
       stroke="currentColor"
       className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
     </svg>
   );
 }
- 
+
 export default function SocialCourseAccordion() {
   const [open, setOpen] = React.useState(0);
- 
+
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
-   const data = [
+  const data = [
     {
       title: "Course 1.1. Access our free Excel material",
-      content: "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
+      content:
+        "https://docs.google.com/spreadsheets/d/1gALseVAuDNZkiI5-9Pr9iKx11e-FENTwjXZXvZqWLNo/edit?usp=sharing",
       pk: "1",
     },
     {
-      title: "Course 1.2. Why emotional tapping & sense of humour important in writing",
+      title:
+        "Course 1.2. Why emotional tapping & sense of humour important in writing",
       content: "Hi",
       pk: "2",
-    },    
+    },
     {
       title: "Course 1.3. Comedy writing principles",
       content: "Hi",
       pk: "3",
-    },    
+    },
     {
-      title: "Course 1.4. Storytelling principles with ",
+      title:
+        "Course 1.4. Storytelling principles - 30+ word-by-word comedy scripts with explanations",
       content: "Hi",
       pk: "4",
-    }, 
+    },
     {
-      title: "Course 1.5. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
+      title:
+        "Course 1.5. The importance of food choices (meat, pasta, sauce, vegs, oil... )",
       content: "Hi",
       pk: "5",
-    }, 
+    },
     {
       title: "Course 1.6. Carb cycling & the front heavy approach dieting",
       content: "Hi",
       pk: "6",
-    }, 
+    },
     {
       title: "Course 1.7. Practical recipes & cooking appliances",
       content: "Hi",
       pk: "7",
-    }, 
-  ]
- 
+    },
+  ];
+
   return (
-
-     <div className="flex flex-col items-center justify-center mx-atuo bg-gray-150" style={{ marginBottom: "10vh"}}>
-      
+    <div
+      className="flex flex-col items-center justify-center mx-atuo bg-gray-150"
+      style={{ marginBottom: "10vh" }}
+    >
       <div>
+        <div
+          className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"
+          style={{ marginBottom: "5vh" }}
+        >
+          The Social Language Accelerator
+        </div>
 
-        <div className="flex justify-center text-3xl font-semibold text-center xl:text-4xl"  style={{ marginBottom: "5vh"}}>
-            The Social Language Accelerator
-        </div>  
-      
         <div style={{ width: "62vw" }}>
-
           {data.map(({ title, content, pk }) => (
-              <Accordion key={title} value={title} open={open === pk} icon={<Icon id={pk} open={pk} />}>
-                  <AccordionHeader onClick={() => handleOpen(pk)} className="mr-10 text-base text-gray-800 xl:text-lg">{title}</AccordionHeader>
-                  <AccordionBody className="text-sm xl:text-base">{content}</AccordionBody>
-              </Accordion>
+            <Accordion
+              key={title}
+              value={title}
+              open={open === pk}
+              icon={<Icon id={pk} open={pk} />}
+            >
+              <AccordionHeader
+                onClick={() => handleOpen(pk)}
+                className="mr-10 text-base text-gray-800 xl:text-lg"
+              >
+                {title}
+              </AccordionHeader>
+              <AccordionBody className="text-sm xl:text-base">
+                {content}
+              </AccordionBody>
+            </Accordion>
           ))}
-
         </div>
 
         <div>
-          <Button color="gray" className="flex items-center justify-center mx-auto text-2xl font-normal xl:text-3xl 2xl:text-4xl"
-              style={{ marginTop: "7vh", width: "40vw", height: "18vh" }}>
-                Yes - I Want Success
+          <Button
+            color="gray"
+            className="flex items-center justify-center mx-auto text-2xl font-normal xl:text-3xl 2xl:text-4xl"
+            style={{ marginTop: "7vh", width: "40vw", height: "18vh" }}
+          >
+            Yes - I Want Success
           </Button>
         </div>
-
       </div>
-
     </div>
   );
 }
