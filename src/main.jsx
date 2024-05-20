@@ -7,7 +7,6 @@ import ErrorPage from "./error-page";
 import Login from "./routes/Login";
 import WeightliftingCourse from "./routes/WeightliftingCourse";
 import EnglishCourse from "./routes/EnglishCourse";
-import Footer from "./routes/FooterContents";
 
 const router = createBrowserRouter([
   {
@@ -27,10 +26,10 @@ const router = createBrowserRouter([
     path: "/english-course",
     element: <EnglishCourse />,
   },
-  {
-    path: "/footer-contents",
-    element: <Footer />,
-  },
+  // {
+  //   path: "/footer-contents",
+  //   element: <Footer />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -19,17 +19,17 @@ const Footer = () => {
               </Typography>
             </li>
             <li>
-              <a href="/footer-contents" className=" hover:text-gray-300">
+              <a className=" hover:text-gray-300">
                 The Team Mission
               </a>
             </li>
             <li>
-              <a href="/footer-contents" className=" hover:text-gray-300">
+              <a className=" hover:text-gray-300">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="/footer-contents" className="hover:text-gray-300">
+              <a className="hover:text-gray-300">
                 Contact Us
               </a>
             </li>
