@@ -1,5 +1,7 @@
 # React + Tailwind
 
+View the project via https://main.d1lvqya729jir4.amplifyapp.com/.
+
 To run the project, type:
 
 - git clone <https://github.com/andrewwu531/Acceleration_Learn.git> <br />
